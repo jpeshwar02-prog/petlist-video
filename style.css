@@ -232,30 +232,37 @@ body {
 
 @media (max-width: 425px) {
   .cards {
-    grid-template-columns: 1fr; /* one video per row */
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+    gap: 12px;
   }
 
   .card iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
-    min-height: 200px; /* ensures enough space for play icon */
-    transform: scale(0.9); /* shrink player (and play icon) only on mobile */
+    min-height: 180px; /* slightly bigger video */
+    transform: scale(0.95); /* shrink play icon a bit */
     transform-origin: center;
   }
 
-  .card {
-    padding: 4px;
+  .card h3 {
+    font-size: 14px;
+    margin: 8px 6px 4px;
+  }
+
+  .card p {
+    font-size: 10px;
+    margin: 0 6px 8px;
   }
 
   .vsection-title {
-    font-size: 1.4rem; /* reduce section heading size */
+    font-size: 1.4rem;
   }
 
   .herovideo {
-    display: none; /* hide banner image on mobile */
+    display: none;
   }
 }
+
 
 /* --------------------------------------------------
    AD BANNER
