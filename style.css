@@ -240,13 +240,13 @@ body {
     width: 100%;
     aspect-ratio: 16 / 9;
     min-height: 200px; /* ensures enough space for play icon */
+    transform: scale(0.9); /* shrink player (and play icon) only on mobile */
+    transform-origin: center;
   }
 
   .card {
     padding: 4px;
   }
-}
-
 
   .vsection-title {
     font-size: 1.4rem; /* reduce section heading size */
@@ -306,9 +306,4 @@ body {
 #pageInfo {
   font-weight: 600;
   color: var(--secondary);
-}
-.card iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
 }
