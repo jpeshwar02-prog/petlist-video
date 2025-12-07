@@ -227,24 +227,40 @@ body {
 }
 
 @media (max-width: 425px) {
+  body {
+    margin: 0; /* remove default body margin */
+  }
+
+  .container {
+    padding: 0;        /* remove left/right padding */
+    max-width: 100%;   /* allow full width */
+  }
+
+  .vsection {
+    padding: 20px 0;   /* remove side padding, keep vertical spacing */
+    border-radius: 0;  /* flush edges */
+    box-shadow: none;  /* optional: remove shadow so section feels full-width */
+    margin: 0;         /* no extra margin around section */
+  }
+
   .cards {
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-    gap: 12px;
-    margin-left: 0;
-    margin-right: 0;
+    gap: 8px;
+    margin: 0;
   }
 
   .card {
-    width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
   .card iframe {
     width: 100%;
-    aspect-ratio: 4 / 3;          /* taller ratio for bigger video */
-    min-height: 200px;            /* increase height */
-    transform: scale(0.9);        /* shrink play icon slightly */
+    aspect-ratio: 5 / 4;           /* taller video for bigger thumbnails */
+    min-height: 220px;
+    transform: scale(0.9);         /* shrink play icon */
     transform-origin: center;
   }
 
@@ -264,11 +280,6 @@ body {
 
   .herovideo {
     display: none;
-  }
-
-  .container {
-    padding-left: 8px;   /* use left/right space efficiently */
-    padding-right: 8px;
   }
 }
 
