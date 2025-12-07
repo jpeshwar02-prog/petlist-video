@@ -230,11 +230,21 @@ body {
   .cards {
     grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
     gap: 12px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .card iframe {
-    min-height: 180px; /* bigger video */
-    transform: scale(0.95); /* shrink play icon */
+    width: 100%;
+    aspect-ratio: 4 / 3;          /* taller ratio for bigger video */
+    min-height: 200px;            /* increase height */
+    transform: scale(0.9);        /* shrink play icon slightly */
     transform-origin: center;
   }
 
@@ -255,7 +265,13 @@ body {
   .herovideo {
     display: none;
   }
+
+  .container {
+    padding-left: 8px;   /* use left/right space efficiently */
+    padding-right: 8px;
+  }
 }
+
 
 /* --------------------------------------------------
    AD BANNER

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetList Tamil - YouTube Videos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cssstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo">PetList Tamil</a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="youtube.html" class="active">YouTube</a></li>
+        <li><a href="index.html#stallions">Stallions</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="herovideo" id="hero">
+    <div class="herovideo-overlay"></div>
+    <div class="herovideo-content">
+      <h1>Our YouTube Videos</h1>
+      <p>Watch the latest horse riding, farm updates, and educational videos from our channel.</p>
+    </div>
+  </section>
+
+  <!-- Adsterra Banner (728x90) -->
+  <div class="ad-banner">
+    <!-- Replace this with your Adsterra code -->
+    <script type="text/javascript" src="//www.topcreativeformat.com/path/to/adsterra-code.js"></script>
+  </div>
+
+  <!-- Video Section -->
+  <section class="vsection" id="youtube">
+    <div class="container reveal">
+      <h2 class="vsection-title">Recent YouTube Videos</h2>
+      <p style="text-align:center;">Catch up on our latest uploads from the PetList Tamil YouTube channel.</p>
+
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="dogs">Dogs</button>
+        <button class="filter-btn" data-category="cats">Cats</button>
+        <button class="filter-btn" data-category="horses">Horses</button>
+        <button class="filter-btn" data-category="farm">Farm</button>
+        <button class="filter-btn" data-category="exotic">Exotic</button>
+        <button class="filter-btn" data-category="fish">Fish</button>
+      </div>
+
+      <!-- Video Grid -->
+      <div class="cards" id="videoGrid">
+        <!-- Horse Video -->
+        <div class="card" data-category="horses">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/v_wvaZlps3M?si=awVJZZAhD2dKt0et" 
+            title="Horse Riding Basics" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            loading="lazy"></iframe>
+          <h3>Horse Riding Basics</h3>
+          <p>Learn essential tips for beginners in horse riding.</p>
+        </div>
+
+        <!-- Farm Video -->
+        <div class="card" data-category="farm">
+          <iframe 
+            src="https://www.youtube.com/embed/VIDEO_ID_2" 
+            title="Farm Tour 2025" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            loading="lazy"></iframe>
+          <h3>Farm Tour 2025</h3>
+          <p>Explore our beautiful farm and facilities in Tamil Nadu.</p>
+        </div>
+
+        <!-- Dog Video -->
+        <div class="card" data-category="dogs">
+          <iframe 
+            src="https://www.youtube.com/embed/VIDEO_ID_DOG" 
+            title="Dog Training Tips" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            loading="lazy"></iframe>
+          <h3>Dog Training Tips</h3>
+          <p>Learn how to train your dogs effectively.</p>
+        </div>
+
+        <!-- Cat Video -->
+        <div class="card" data-category="cats">
+          <iframe 
+            src="https://www.youtube.com/embed/VIDEO_ID_CAT" 
+            title="Cat Care Basics" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            loading="lazy"></iframe>
+          <h3>Cat Care Basics</h3>
+          <p>Tips for keeping your cats healthy and happy.</p>
+        </div>
+
+        <!-- Exotic Video -->
+        <div class="card" data-category="exotic">
+          <iframe 
+            src="https://www.youtube.com/embed/VIDEO_ID_EXOTIC" 
+            title="Exotic Animal Showcase" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            loading="lazy"></iframe>
+          <h3>Exotic Animal Showcase</h3>
+          <p>Meet rare and exotic animals from around the world.</p>
+        </div>
+
+        <!-- Fish Video -->
+        <div class="card" data-category="fish">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/6KDlzFMYBY0?si=RkyY9kuLPRoQ4Tb9&amp;start=7" 
+            title="Fish Tank Setup" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen 
+            loading="lazy"></iframe>
+          <h3>Fish Tank Setup</h3>
+          <p>Learn how to set up and maintain a fish tank.</p>
+        </div>
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="pagination">
+        <button id="prevPage" disabled>Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>PetList Tamil</h4>
+        <p>Connecting pet lovers, horse breeders, and farms in Tamil Nadu.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#stallions">Stallions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="subfooter">&copy; 2025 PetList Tamil. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
