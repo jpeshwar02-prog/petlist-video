@@ -285,14 +285,14 @@ body {
   .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    margin: -15px;         /* reset margin, let container handle spacing */
-    padding: 24px 0px;
+    margin: -35px;         /* reset margin, let container handle spacing */
+    padding: 40px 0px;
   }
 
   .card iframe {
     width: 100%;
     aspect-ratio: 5 / 4;   /* taller video for bigger thumbnails */
-    min-height: 150px;     /* keep thumbnails large */
+    min-height: 180px;     /* keep thumbnails large */
     transform: scale(0.9); /* shrink play icon */
     transform-origin: center;
   }
