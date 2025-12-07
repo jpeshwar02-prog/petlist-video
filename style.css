@@ -115,19 +115,22 @@ body {
 }
 
 .filter-buttons {
-  margin: 0 auto;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filter-btn {
   background: var(--primary);
   color: #fff;
   border: none;
-  padding: 10px 16px;
-  margin: 5px;
+  padding: 12px 20px;   /* bigger buttons for desktop */
+  margin: 6px;
   border-radius: 6px;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .filter-btn:hover {
@@ -146,6 +149,7 @@ body {
   grid-template-columns: repeat(3, 1fr); /* desktop default */
   gap: 24px;
   margin-top: 20px;
+  margin-bottom: 30px;   /* space before pagination */
 }
 
 .card {
@@ -260,24 +264,24 @@ body {
   }
 
   .container {
-    padding: 0;        /* remove side padding */
-    max-width: 100%;   /* allow full width */
+    padding: 0;
+    max-width: 100%;
   }
 
   .filter-btn {
-    padding: 6px 10px;
+    padding: 6px 10px;   /* smaller buttons */
     font-size: 0.75rem;
     margin: 3px;
     border-radius: 4px;
   }
 
   .filter-buttons {
-    margin: 12px 0;    /* tighter spacing */
+    margin: 12px 0;
   }
 
   .vsection {
     padding: 0;
-    margin: 0;         /* no negative margin needed */
+    margin: 0;
     border-radius: 0;
     box-shadow: none;
   }
@@ -285,15 +289,15 @@ body {
   .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    margin: -35px;         /* reset margin, let container handle spacing */
-    padding: 40px 0px;
+    margin: 0 0 20px 0;  /* clean spacing before pagination */
+    padding: 0;
   }
 
   .card iframe {
     width: 100%;
     aspect-ratio: 5 / 4;   /* taller video for bigger thumbnails */
-    min-height: 100px;     /* keep thumbnails large */
-    transform: scale(0.9); /* shrink play icon */
+    min-height: 220px;
+    transform: scale(0.9);
     transform-origin: center;
   }
 
