@@ -231,28 +231,22 @@ body {
 }
 
 @media (max-width: 425px) {
-  .filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .card h3, .card p {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-
-  .pagination {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 375px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* one video per row */
+    gap: 16px;
+  }
+
+  .card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 200px; /* ensures enough space for play icon */
+  }
+
+  .card {
+    padding: 4px;
   }
 }
+
 
   .vsection-title {
     font-size: 1.4rem; /* reduce section heading size */
