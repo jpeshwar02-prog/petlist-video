@@ -231,26 +231,28 @@ body {
 }
 
 @media (max-width: 425px) {
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .card h3, .card p {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .pagination {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 375px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-    gap: 12px; /* tighter gap for small screens */
+    grid-template-columns: 1fr;
   }
-
-  .card h3 {
-    font-size: 14px;   /* smaller heading */
-    margin: 8px 6px 4px;
-  }
-
-  .card p {
-    font-size: 10px;   /* smaller description */
-    margin: 0 6px 8px;
-  }
-
-  .card iframe {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    height: auto;
-  }
+}
 
   .vsection-title {
     font-size: 1.4rem; /* reduce section heading size */
