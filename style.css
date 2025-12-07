@@ -283,7 +283,17 @@ body {
   }
 }
 
+.filter-btn {
+    padding: 6px 10px;   /* smaller button size */
+    font-size: 0.75rem;  /* reduce text size */
+    margin: 3px;         /* tighter spacing */
+    border-radius: 4px;  /* slightly smaller corners */
+  }
 
+  .filter-buttons {
+    margin: 12px 0;      /* reduce vertical spacing */
+  }
+}
 /* --------------------------------------------------
    AD BANNER
 -------------------------------------------------- */
