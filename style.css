@@ -45,11 +45,7 @@ body {
   transition: var(--transition);
 }
 
-.nav-list li a:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
+.nav-list li a:hover,
 .nav-list li a.active {
   background: var(--accent);
   color: #fff;
@@ -186,15 +182,15 @@ body {
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0,0,0,0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-width: 160px; /* prevents shrinking too much */
+  min-width: 160px;
 }
 
 .card iframe {
   width: 100%;
-  aspect-ratio: 16 / 9; /* keeps proper landscape ratio */
+  aspect-ratio: 16 / 9;
   border: none;
   display: block;
-  height: auto; /* responsive height */
+  height: auto;
 }
 
 .card h3 {
@@ -220,13 +216,13 @@ body {
 -------------------------------------------------- */
 @media (max-width: 1024px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr); /* large tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr); /* small tablets / large phones */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -237,10 +233,8 @@ body {
   }
 
   .card iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    min-height: 180px; /* slightly bigger video */
-    transform: scale(0.95); /* shrink play icon a bit */
+    min-height: 180px; /* bigger video */
+    transform: scale(0.95); /* shrink play icon */
     transform-origin: center;
   }
 
@@ -262,7 +256,6 @@ body {
     display: none;
   }
 }
-
 
 /* --------------------------------------------------
    AD BANNER
