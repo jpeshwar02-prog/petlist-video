@@ -269,14 +269,16 @@ body {
   }
 
   .filter-btn {
-    padding: 6px 10px;   /* smaller buttons */
-    font-size: 0.75rem;
-    margin: 3px;
-    border-radius: 4px;
+    padding: 10px 16px;   /* bigger tap area */
+    font-size: 0.9rem;    /* larger text */
+    margin: 4px;
+    border-radius: 6px;
   }
 
   .filter-buttons {
-    margin: 12px 0;
+    margin: 16px 0;       /* balanced spacing */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .vsection {
