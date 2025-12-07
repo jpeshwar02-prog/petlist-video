@@ -292,7 +292,7 @@ body {
   .card iframe {
     width: 100%;
     aspect-ratio: 5 / 4;   /* taller video for bigger thumbnails */
-    min-height: 150px;     /* keep thumbnails large */
+    min-height: 100px;     /* keep thumbnails large */
     transform: scale(0.9); /* shrink play icon */
     transform-origin: center;
   }
