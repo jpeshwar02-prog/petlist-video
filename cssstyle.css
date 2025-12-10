@@ -701,8 +701,8 @@ body {
 }
 
 .trending-videos .swiper-pagination-bullet {
-  width: 30px;
-  height: 4px;
+  width: 15px;
+  height: 2px;
   border-radius: 2px;
   background: #ccc;
   opacity: 1;
@@ -856,6 +856,23 @@ body {
   background: #e13d5a;
 }
 
+.top-stallions .show-all-btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  float: right;
+}
+.top-stallions .show-all-btn:hover {
+  background: #e13d5a;
+}
+
+
 /* =================== Mobile Slider (≤768px) =================== */
 @media (max-width: 768px) {
   .stallion-slider {
@@ -898,6 +915,13 @@ body {
   }
   .stallion-nav span.active {
     color: #ff4d6d;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-stallions .show-all-btn {
+    float: right;
+    margin: 10px 15px 0 0;
   }
 }
 
@@ -1061,7 +1085,7 @@ body {
 
   /* Pagination Line (Below Cards) */
   .new-home-horses .stallion-nav {
-    text-align: left;
+    text-align: center;
     margin: 12px 15px 0 15px; 
     font-size: 20px;           
     letter-spacing: 8px;       
@@ -1243,7 +1267,7 @@ body {
   }
 
   .more-pets .stallion-nav {
-    text-align: left;
+    text-align: center;
     margin: 12px 15px 0 15px;
     font-size: 20px;
     letter-spacing: 8px;
@@ -1294,4 +1318,17 @@ body {
     padding: 0 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .services-grid {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  #services {
+    display: none !important;
+  }
+}
+
+
 
