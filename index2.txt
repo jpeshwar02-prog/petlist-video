@@ -381,6 +381,67 @@
   </div>
 </section>  
 
+<!--<section id="accessories">
+  <div class="container accessories-layout">
+
+    <!-- Left: Slider Content -->
+    <div class="accessories-left">
+      <h4 class="section-tag">HORSE ACCESSORIES GUIDE</h4>
+      <h2>Purpose of Common Horse Accessories</h2>
+      <p>
+        Horse riding and care involve a variety of important accessories. Each 
+        serves a unique purpose to ensure the <strong>safety, comfort, and control</strong> 
+        of both horse and rider. Here are a few essentials:
+      </p>
+
+      <div class="accessories-slider">
+        <div class="accessories-item active">
+          <h3>Saddle</h3>
+          <p>
+            Provides the rider a secure and comfortable seat while protecting 
+            the horse’s back from direct pressure.
+          </p>
+        </div>
+
+        <div class="accessories-item">
+          <h3>Bit & Bridle</h3>
+          <p>
+            Used for communication and control. The bit rests in the horse’s mouth, 
+            while the bridle holds it in place and connects to the reins.
+          </p>
+        </div>
+
+        <div class="accessories-item">
+          <h3>Horse Shoes</h3>
+          <p>
+            Protect the horse’s hooves from wear and tear, especially on hard or rough ground.
+          </p>
+        </div>
+
+        <div class="accessories-item">
+          <h3>Girth & Stirrup</h3>
+          <p>
+            The girth secures the saddle to the horse, while stirrups give the rider balance and support.
+          </p>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="accessories-nav">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Fixed Image -->
+    <div class="accessories-right">
+      <img src="accessories.jpg" alt="Horse Accessories">
+    </div>
+
+  </div>
+</section>-->
 
 
 <!-- ======================== More Pets Section ======================== -->

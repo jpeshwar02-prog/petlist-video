@@ -1266,6 +1266,24 @@ body {
   }
 }
 
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+.nav-list li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* =================== Small Mobile Tweaks (≤480px) =================== */
 @media (max-width: 480px) {
   .more-pets .section-title {
