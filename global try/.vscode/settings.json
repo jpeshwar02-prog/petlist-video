@@ -1,0 +1,8 @@
+{
+  "editor.quickSuggestions": { "other": true, "comments": false, "strings": true },
+  "path-autocomplete.mappings": {
+    "assets": "I:\\petlist video web\\pethub\\petlist-theme\\global try\\assets",
+    "images": "I:\\petlist video web\\pethub\\petlist-theme\\global try\\assets\\images",
+    "farms": "I:\\petlist video web\\pethub\\petlist-theme\\global try\\assets\\images\\farms"
+  }
+}

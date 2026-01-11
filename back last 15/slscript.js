@@ -1,0 +1,394 @@
+/* ======================== Navbar Toggle ======================== */
+/* ======================== Full Script ======================== */
+document.addEventListener("DOMContentLoaded", () => {
+  /* ======================== Navbar Toggle ======================== */
+  const navToggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-list');
+
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', () => {
+      navList.classList.toggle('open');
+      navToggle.setAttribute(
+        "aria-expanded",
+        navList.classList.contains("open") ? "true" : "false"
+      );
+    });
+  }
+
+  /* ======================== Scroll Reveal ======================== */
+  const revealElements = document.querySelectorAll('.reveal');
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 50) el.classList.add('show');
+    });
+  }
+  revealOnScroll();
+  window.addEventListener('scroll', revealOnScroll);
+
+  /* ======================== Contact Form ======================== */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      contactForm.reset();
+    });
+  }
+
+  /* ======================== Services Slider ======================== */
+  const track = document.querySelector('.services-track');
+  const serviceCards = Array.from(document.querySelectorAll('.services-track .service-card'));
+  const dotsContainer = document.querySelector('.slider-dots');
+
+  if (track && serviceCards.length && dotsContainer) {
+    let currentSlide = 0;
+    let cardsPerView = 3;
+
+    function updateCardsPerView() {
+      const width = window.innerWidth;
+      if (width <= 600) cardsPerView = 1;
+      else if (width <= 992) cardsPerView = 2;
+      else cardsPerView = 3;
+
+      const trackWidth = track.offsetWidth;
+      const cardWidth = trackWidth / cardsPerView - 20;
+      serviceCards.forEach(card => card.style.flex = `0 0 ${cardWidth}px`);
+
+      createDots();
+      moveToSlide(0);
+    }
+
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      const totalSlides = Math.ceil(serviceCards.length / cardsPerView);
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => moveToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function moveToSlide(index) {
+      currentSlide = index;
+      const cardWidth = serviceCards[0].getBoundingClientRect().width + 20;
+      track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+      dotsContainer.querySelectorAll('button')
+        .forEach((dot, idx) => dot.classList.toggle('active', idx === index));
+    }
+
+    window.addEventListener('resize', updateCardsPerView);
+    updateCardsPerView();
+  }
+
+  /* ======================== Accessories Slider ======================== */
+  const slides = document.querySelectorAll('.accessories-item');
+  const dotsContainerAcc = document.querySelector('.accessories-nav');
+  let currentAccessory = 0;
+
+  if (slides.length && dotsContainerAcc) {
+    dotsContainerAcc.innerHTML = '';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => showAccessorySlide(i));
+      dotsContainerAcc.appendChild(dot);
+    });
+  }
+
+  const dotsAcc = dotsContainerAcc ? dotsContainerAcc.querySelectorAll('.dot') : [];
+
+  function showAccessorySlide(index) {
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    dotsAcc.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    currentAccessory = index;
+    adjustAccessoryImageHeight();
+  }
+
+  function adjustAccessoryImageHeight() {
+    const activeSlide = document.querySelector('.accessories-item.active');
+    if (!activeSlide) return;
+    const left = activeSlide.querySelector('.accessories-left');
+    const img = activeSlide.querySelector('.accessories-right img');
+    if (left && img && window.innerWidth > 992) img.style.height = `${left.offsetHeight}px`;
+    else if (img) img.style.height = 'auto';
+  }
+
+  window.addEventListener('load', () => showAccessorySlide(0));
+  window.addEventListener('resize', adjustAccessoryImageHeight);
+
+  /* ======================== Swiper Slider ======================== */
+  if (window.Swiper) {
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 1.1,
+      spaceBetween: 16,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      breakpoints: {
+        600: { slidesPerView: 2, spaceBetween: 20 },
+        992: { slidesPerView: 3, spaceBetween: 30 }
+      },
+      on: {
+        init: function () { setInitialZoom(this); },
+        slideChangeTransitionStart: function () { setInitialZoom(this); }
+      }
+    });
+
+    function setInitialZoom(sw) {
+      sw.slides.forEach(slide => {
+        slide.style.transform = "scale(0.9)";
+        slide.style.opacity = "0.6";
+        slide.style.zIndex = "1";
+      });
+      const active = sw.slides[sw.activeIndex];
+      if (active) {
+        active.style.transform = "scale(1.2)";
+        active.style.opacity = "1";
+        active.style.zIndex = "3";
+      }
+      const prev = sw.slides[sw.activeIndex - 1];
+      const next = sw.slides[sw.activeIndex + 1];
+      if (prev) { prev.style.transform = "scale(0.95)"; prev.style.opacity = "0.8"; prev.style.zIndex = "2"; }
+      if (next) { next.style.transform = "scale(0.95)"; next.style.opacity = "0.8"; next.style.zIndex = "2"; }
+    }
+  }
+
+  /* ======================== Stallion Listing Data ======================== */
+  const stallions = [
+    { name: "Thunder King", owner: "Arjun Rao", ranch: "Sunrise Ranch", city: "Trichy", bloodline: "bloodline", color: "black", winner: "yes", image: "stallion1.jpg" },
+    { name: "Royal Blaze", owner: "Meera Farms", ranch: "Green Valley", city: "Chennai", bloodline: "non-bloodline", color: "brown", winner: "no", image: "stallion2.jpg" },
+    { name: "Majestic Star", owner: "Ravi Kumar", ranch: "Blue Sky Ranch", city: "Bangalore", bloodline: "bloodline", color: "white", winner: "yes", image: "stallion3.jpg" },
+    { name: "Lightning Bolt", owner: "Karthik Farms", ranch: "Red Hill Ranch", city: "Coimbatore", bloodline: "non-bloodline", color: "grey", winner: "no", image: "stallion4.jpg" }
+    // add more...
+  ];
+
+  /* ======================== Stallion Listing Logic ======================== */
+  const cardsPerPage = 6;
+  let currentPage = 1;
+
+  const container = document.querySelector(".cards-container");
+  const pagination = document.querySelector(".pagination");
+
+  const cityFilter = document.getElementById("cityFilter");
+  const bloodlineFilter = document.getElementById("bloodlineFilter");
+  const colorFilter = document.getElementById("colorFilter");
+  const winnerFilter = document.getElementById("winnerFilter");
+
+  // Guard against missing elements
+  if (!container || !pagination || !cityFilter || !bloodlineFilter || !colorFilter || !winnerFilter) {
+    console.warn("Listing elements missing. Check HTML IDs/classes.");
+    return;
+  }
+
+  function populateFilters() {
+    function fillSelect(selectEl, values) {
+      const uniqueVals = [...new Set(values.map(v => v?.trim()).filter(Boolean))];
+      uniqueVals.forEach(val => {
+        const opt = document.createElement("option");
+        opt.value = val.toLowerCase();
+        opt.textContent = val;
+        selectEl.appendChild(opt);
+      });
+    }
+
+    // Ensure first option is "All" with empty value
+    [cityFilter, bloodlineFilter, colorFilter, winnerFilter].forEach(sel => {
+      if (!sel.querySelector('option[value=""]')) {
+        const allOpt = document.createElement('option');
+        allOpt.value = "";
+        allOpt.textContent = "All";
+        sel.insertBefore(allOpt, sel.firstChild);
+      }
+    });
+
+    fillSelect(cityFilter, stallions.map(s => s.city));
+    fillSelect(bloodlineFilter, stallions.map(s => s.bloodline));
+    fillSelect(colorFilter, stallions.map(s => s.color));
+    fillSelect(winnerFilter, stallions.map(s => s.winner === "yes" ? "Yes" : "No"));
+  }
+
+  function applyFilters() {
+    const cityVal = cityFilter.value;          // lowercase values already
+    const bloodlineVal = bloodlineFilter.value;
+    const colorVal = colorFilter.value;
+    const winnerVal = winnerFilter.value;
+
+    return stallions.filter(s => {
+      const win = s.winner.toLowerCase();
+      return (!cityVal || s.city.toLowerCase() === cityVal) &&
+             (!bloodlineVal || s.bloodline.toLowerCase() === bloodlineVal) &&
+             (!colorVal || s.color.toLowerCase() === colorVal) &&
+             (!winnerVal || win === winnerVal.toLowerCase());
+    });
+  }
+
+  function renderStallionsPage(list, page) {
+    container.innerHTML = "";
+    const start = (page - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
+    list.slice(start, end).forEach(stallion => {
+      const card = document.createElement("div");
+      card.className = "card stallion-card";
+      card.innerHTML = `
+        <img src="${stallion.image}" alt="${stallion.name}">
+        <div class="details">
+          <h3>${stallion.name}</h3>
+          <p><i class="fa-solid fa-user"></i> ${stallion.owner}</p>
+          <p><i class="fa-solid fa-tractor"></i> ${stallion.ranch}</p>
+          <p><i class="fa-solid fa-map-location-dot"></i> ${stallion.city}</p>
+          <div class="details-footer">
+            <a href="stallion-detail.html" class="btn">View Details</a>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+
+    if (!list.length) {
+      const empty = document.createElement("p");
+      empty.textContent = "No stallions match the selected filters.";
+      empty.style.gridColumn = "1 / -1";
+      empty.style.textAlign = "center";
+      empty.style.color = "#666";
+      container.appendChild(empty);
+    }
+  }
+
+  function renderPagination(totalItems) {
+    pagination.querySelectorAll(".page-btn.number").forEach(btn => btn.remove());
+    const totalPages = Math.ceil(totalItems / cardsPerPage);
+
+    const prevBtn = pagination.querySelector(".prev");
+    const nextBtn = pagination.querySelector(".next");
+    if (totalPages <= 1) {
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+      return;
+    } else {
+      if (prevBtn) prevBtn.style.display = "";
+      if (nextBtn) nextBtn.style.display = "";
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("a");
+      btn.href = "#";
+      btn.className = "page-btn number" + (i === currentPage ? " active" : "");
+      btn.textContent = i;
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        currentPage = i;
+        update();
+      });
+      pagination.insertBefore(btn, pagination.querySelector(".next"));
+    }
+  }
+
+  function update() {
+    const filtered = applyFilters();
+    const totalPages = Math.ceil(filtered.length / cardsPerPage);
+    if (totalPages === 0) {
+      currentPage = 1;
+      renderStallionsPage(filtered, currentPage);
+      renderPagination(filtered.length);
+      return;
+    }
+    if (currentPage > totalPages) currentPage = 1;
+    renderStallionsPage(filtered, currentPage);
+    renderPagination(filtered.length);
+  }
+
+  const prevBtn = pagination.querySelector(".prev");
+  const nextBtn = pagination.querySelector(".next");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", e => {
+      e.preventDefault();
+      if (currentPage > 1) {
+        currentPage--;
+        update();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", e => {
+      e.preventDefault();
+      const totalPages = Math.ceil(applyFilters().length / cardsPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        update();
+      }
+    });
+  }
+
+  [cityFilter, bloodlineFilter, colorFilter, winnerFilter].forEach(f => {
+    f.addEventListener("change", () => {
+      currentPage = 1;
+      update();
+    });
+  });
+
+  function resetFilters() {
+    [cityFilter, bloodlineFilter, colorFilter, winnerFilter].forEach(f => f.value = "");
+    currentPage = 1;
+    update();
+  }
+
+  // Init
+  populateFilters();
+  update();
+
+  /* ======================== Mobile/Responsive Filter Controls ======================== */
+  const filterToggle = document.querySelector(".filter-toggle");
+  const filtersSidebar = document.querySelector(".filters-sidebar");
+  const filterOk = document.querySelector(".filter-ok");
+  const filterReset = document.querySelector(".filter-reset");
+
+  if (filterToggle && filtersSidebar) {
+    filterToggle.addEventListener("click", () => {
+      filtersSidebar.classList.toggle("open");
+      filterToggle.setAttribute(
+        "aria-expanded",
+        filtersSidebar.classList.contains("open") ? "true" : "false"
+      );
+    });
+  }
+
+  if (filterOk && filtersSidebar) {
+    filterOk.addEventListener("click", () => {
+      filtersSidebar.classList.remove("open");
+      if (filterToggle) filterToggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  if (filterReset) {
+    filterReset.addEventListener("click", () => {
+      resetFilters();
+      // Close sidebar on mobile after reset
+      if (filtersSidebar && filterToggle) {
+        filtersSidebar.classList.remove("open");
+        filterToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* ======================== Optional Mobile Filter Select ======================== */
+  const mobileFilterSelect = document.getElementById("mobileFilterSelect");
+  if (mobileFilterSelect) {
+    mobileFilterSelect.addEventListener("change", (e) => {
+      const selected = e.target.value;
+      switch (selected) {
+        case "city": cityFilter.focus(); break;
+        case "bloodline": bloodlineFilter.focus(); break;
+        case "color": colorFilter.focus(); break;
+        case "winner": winnerFilter.focus(); break;
+        default: resetFilters();
+      }
+    });
+  }
+});

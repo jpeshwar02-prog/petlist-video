@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PetList Tamil - Stallion Detail</title>
+
+  <!-- Global + Page CSS -->
+  <link rel="stylesheet" href="assets/css/cssstyle.css"/>
+  <link rel="stylesheet" href="assets/css/listing.css"/>
+  <link rel="stylesheet" href="assets/css/card.css"/>
+  <link rel="stylesheet" href="assets/css/detail.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Lightbox Modal -->
+<div id="lightboxModal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <span class="close" aria-label="Close">&times;</span>
+    <span class="prev" aria-label="Previous">&#10094;</span>
+    <span class="next" aria-label="Next">&#10095;</span>
+    <img id="lightboxImage" alt="Zoomed image"/>
+    <iframe id="lightboxVideo" frameborder="0" allowfullscreen title="Zoomed video"></iframe>
+  </div>
+</div>
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo">PetList Tamil</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#youtube">YouTube</a></li>
+        <li><a href="singlelist.html" class="active">Stallions</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="detail-page">
+
+    <!-- Hero -->
+    <section class="detail-hero" id="detail-hero" aria-label="Animal hero section">
+      <div class="hero-overlay">
+        <h1 id="animal-name"></h1>
+        <p id="animal-subtitle"></p>
+      </div>
+    </section>
+
+    <!-- Gallery + Details -->
+    <section class="detail-gallery container" aria-label="Media gallery and details">
+      <!-- Left column -->
+      <div class="left-panel">
+        <!-- Image panel -->
+        <div class="image-panel">
+          <div class="image-frame">
+            <img id="main-image" alt="Main animal image" decoding="async"/>
+            <button class="zoom-btn" id="zoom-btn" aria-label="Open gallery">
+              <i class="fas fa-magnifying-glass-plus"></i>
+            </button>
+          </div>
+          <div class="thumbs" id="thumbs" aria-label="Thumbnail images"></div>
+        </div>
+
+        <!-- ✅ Video sits right after image panel -->
+        <div class="video-frame">
+          <iframe id="video" frameborder="0" allowfullscreen title="Animal video"></iframe>
+        </div>
+
+        <!-- Detail sections -->
+        <div class="detail-slider">
+          <section class="detail-info" aria-label="General details">
+            <h2>General Details</h2>
+            <ul class="tick-list" id="general-details"></ul>
+          </section>
+
+          <section class="detail-info" aria-label="Work and activities">
+            <h2>Work & Activities</h2>
+            <ul class="tick-list" id="work-details"></ul>
+          </section>
+
+          <section class="detail-info" aria-label="Specific details">
+            <h2>Specific Details</h2>
+            <ul class="tick-list" id="specific-details"></ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="right-panel">
+        <section class="detail-info card-list" aria-label="Farm details">
+          <h2>Farm Details</h2>
+          <ul class="tick-list" id="farm-details"></ul>
+        </section>
+
+        <div class="ad-slot ad-sidebar" aria-label="Sidebar advertisement">
+          <img src="images/ads-300x250.jpg" alt="Advertisement banner 300x250"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related animals -->
+    <section class="related-animals container" aria-label="Related animals">
+      <h2>Related Animals</h2>
+      <div class="related-slider" id="related-slider"></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="detail-cta" aria-label="Contact owner">
+      <a href="contact.html" class="cta-btn" id="contact-link">Contact Owner</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="subfooter">
+      <p>&copy; 2025 PetList Tamil. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="shared.js" defer></script>
+  <script src="detail.js" defer></script>
+</body>
+</html>

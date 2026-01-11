@@ -1,0 +1,266 @@
+[
+  { 
+    "farmId": "f0001",
+    "animalId": "st001",
+    "type": "horse",
+    "prefix": "st",
+    "name": "Thunder King",
+    "slug": "thunder-king",
+    "breed": "Marwari",
+    "age": 7,
+    "gender": "stallion",
+    "attributes": {
+      "studAvailable": true,
+      "height": "15.3 hands",
+      "purpose": ["ride"],
+      "showTrained": true,
+      "dance": false,
+      "gelded": false,
+      "winner": true,
+      "legBlaze": "3 legs",
+      "hairWhorl": "forehead whorl",
+      "clubRegister": true,
+      "bloodline": "bloodline",
+      "color": "black",
+      "topStallion": true,
+      "newHome": false,
+      "morePets": false
+    },
+    "createdAt": "2025-12-01",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0001-royal-stables/animals/stallions/st001-thunder-king/f0001-s001-1.jpg",
+        "img2": "assets/images/farms/f0001-royal-stables/animals/stallions/st001-thunder-king/f0001-s001-2.jpg",
+        "img3": "assets/images/farms/f0001-royal-stables/animals/stallions/st001-thunder-king/f0001-s001-3.jpg"
+      },
+      "video": "https://www.youtube.com/embed/VIDEO_ID2"
+    }
+  },
+  {
+    "farmId": "f0002",
+    "animalId": "st001",
+    "type": "horse",
+    "prefix": "st",
+    "name": "Royal Blaze",
+    "slug": "royal-blaze",
+    "breed": "Thoroughbred",
+    "age": 5,
+    "gender": "stallion",
+    "attributes": {
+      "studAvailable": false,
+      "height": "16.0 hands",
+      "purpose": ["ride", "buggy"],
+      "showTrained": false,
+      "dance": false,
+      "gelded": false,
+      "winner": false,
+      "legBlaze": "4 legs",
+      "hairWhorl": "neck whorl",
+      "clubRegister": false,
+      "bloodline": "non-bloodline",
+      "color": "brown",
+      "topStallion": true,
+      "newHome": true,
+      "morePets": false
+    },
+    "createdAt": "2025-11-20",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0002-blaze-ranch/animals/stallions/st001-royal-blaze/f0002-s001-1.jpg",
+        "img2": "assets/images/farms/f0002-blaze-ranch/animals/stallions/st001-royal-blaze/f0002-s001-2.jpg",
+        "img3": "assets/images/farms/f0002-blaze-ranch/animals/stallions/st001-royal-blaze/f0002-s001-3.jpg"
+
+      },
+      "video": "https://www.youtube.com/embed/VIDEO_ID2"
+    }
+  },
+  {
+    "farmId": "f0003",
+    "animalId": "st001",
+    "type": "horse",
+    "prefix": "st",
+    "name": "Majestic Star",
+    "slug": "majestic-star",
+    "breed": "Marwari",
+    "age": 8,
+    "gender": "stallion",
+    "attributes": {
+      "studAvailable": true,
+      "height": "15.1 hands",
+      "purpose": ["ride"],
+      "showTrained": true,
+      "dance": true,
+      "gelded": false,
+      "winner": true,
+      "legBlaze": "2 legs",
+      "hairWhorl": "double whorl",
+      "clubRegister": true,
+      "bloodline": "bloodline",
+      "color": "white",
+      "topStallion": true,
+      "newHome": false,
+      "morePets": true
+    },
+    "createdAt": "2025-11-15",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0003-majestic-farm/animals/stallions/st001-majestic-star/f0003-s001-1.jpg",
+        "img2": "assets/images/farms/f0003-majestic-farm/animals/stallions/st001-majestic-star/f0003-s001-2.jpg",
+        "img3": "assets/images/farms/f0003-majestic-farm/animals/stallions/st001-majestic-star/f0003-s001-3.jpg"
+ 
+      },
+      "video": "https://www.youtube.com/embed/VIDEO_ID3"
+    }
+  },
+  {
+    "farmId": "f0004",
+    "animalId": "st001",
+    "type": "horse",
+    "prefix": "mr",
+    "name": "Silver Arrow",
+    "slug": "silver-arrow",
+    "breed": "Thoroughbred",
+    "age": 6,
+    "gender": "mare",
+    "attributes": {
+      "studAvailable": false,
+      "height": "15.2 hands",
+      "purpose": ["ride", "buggy"],
+      "showTrained": false,
+      "dance": false,
+      "gelded": false,
+      "winner": false,
+      "legBlaze": "1 leg",
+      "hairWhorl": "forehead whorl",
+      "clubRegister": false,
+      "bloodline": "bloodline",
+      "color": "grey",
+      "topStallion": true,
+      "newHome": true,
+      "morePets": false
+    },
+    "createdAt": "2025-11-10",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0004-arrow-ranch/animals/stallions/st001-silver-arrow/f0004-s001-1.jpg",
+        "img2": "assets/images/farms/f0004-arrow-ranch/animals/stallions/st001-silver-arrow/f0004-s001-2.jpg",
+        "img3": "assets/images/farms/f0004-arrow-ranch/animals/stallions/st001-silver-arrow/f0004-s001-3.jpg"
+
+      },
+      "video": "https://www.youtube.com/embed/VIDEO_ID4"
+    }
+  },
+  {
+    "farmId": "f0005",
+    "animalId": "st001",
+    "type": "horse",
+    "prefix": "st",
+    "name": "Shadow Runner",
+    "slug": "shadow-runner",
+    "breed": "Marwari",
+    "age": 4,
+    "gender": "stallion",
+    "attributes": {
+      "studAvailable": false,
+      "height": "15.0 hands",
+      "purpose": ["ride"],
+      "showTrained": false,
+      "dance": false,
+      "gelded": true,
+      "winner": false,
+      "legBlaze": "no markings",
+      "hairWhorl": "neck whorl",
+      "clubRegister": false,
+      "bloodline": "non-bloodline",
+      "color": "bay",
+      "topStallion": false,
+      "newHome": true,
+      "morePets": true
+    },
+    "createdAt": "2025-11-05",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0005-runner-farm/animals/stallions/st001-shadow-runner/f0005-s001-1.jpg",
+        "img2": "assets/images/farms/f0005-runner-farm/animals/stallions/st001-shadow-runner/f0005-s001-2.jpg",
+        "img3": "assets/images/farms/f0005-runner-farm/animals/stallions/st001-shadow-runner/f0005-s001-3.jpg"
+    },
+      "video": "https://www.youtube.com/embed/VIDEO_ID5"
+    }
+  },
+  {
+    "farmId": "f0006",
+    "animalId": "st001",
+    "type": "horse",
+    "prefix": "st",
+    "name": "Golden Flame",
+    "slug": "golden-flame",
+    "breed": "Marwari",
+    "age": 9,
+    "gender": "stallion",
+    "attributes": {
+      "studAvailable": false,
+      "height": "15.2 hands",
+      "purpose": ["ride", "buggy"],
+      "showTrained": true,
+      "dance": false,
+      "gelded": false,
+      "winner": true,
+      "legBlaze": "4 legs",
+      "hairWhorl": "forehead whorl",
+      "clubRegister": true,
+      "bloodline": "bloodline",
+      "color": "chestnut",
+      "topStallion": false,
+      "newHome": true,
+      "morePets": true
+    },
+    "createdAt": "2025-11-01",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0006-golden-ranch/animals/stallions/st001-golden-flame/f0006-s001-1.jpg",
+        "img2": "assets/images/farms/f0006-golden-ranch/animals/stallions/st001-golden-flame/f0006-s001-2.jpg",
+        "img3": "assets/images/farms/f0006-golden-ranch/animals/stallions/st001-golden-flame/f0006-s001-3.jpg"
+
+      },
+      "video": "https://www.youtube.com/embed/VIDEO_ID6"
+    }
+  },
+  {
+    "farmId": "f0002",
+    "animalId": "st002",
+    "type": "horse",
+    "prefix": "st",
+    "name": "Blaze Thunder",
+    "slug": "blaze-thunder",
+    "breed": "Thoroughbred",
+    "age": 6,
+    "gender": "stallion",
+    "attributes": {
+      "studAvailable": true,
+      "height": "16.2 hands",
+      "purpose": ["ride"],
+      "showTrained": true,
+      "dance": false,
+      "gelded": false,
+      "winner": true,
+      "legBlaze": "2 legs",
+      "hairWhorl": "neck whorl",
+      "clubRegister": false,
+      "bloodline": "non-bloodline",
+      "color": "black",
+      "topStallion": false,
+      "newHome": false,
+      "morePets": false
+    },
+    "createdAt": "2025-11-25",
+    "media": {
+      "images": {
+        "img1": "assets/images/farms/f0002-blaze-ranch/animals/stallions/st002-blaze-thunder/f0002-s002-1.jpg",
+        "img2": "assets/images/farms/f0002-blaze-ranch/animals/stallions/st002-blaze-thunder/f0002-s002-2.jpg",
+        "img3": "assets/images/farms/f0002-blaze-ranch/animals/stallions/st002-blaze-thunder/f0002-s002-3.jpg"
+
+      },
+      "video": "https://www.youtube.com/embed/VIDEO_ID3"
+    }
+  }
+]

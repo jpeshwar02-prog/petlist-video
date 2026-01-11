@@ -6,7 +6,11 @@
   <title>PetList Tamil - Farm & Stallions</title>
 
   <!-- Local CSS -->
-  <link rel="stylesheet" href="cssstyle.css">
+  <link rel="stylesheet" href="assets/css/cssstyle.css">
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="assets/css/card.css">
+  <link rel="stylesheet" href="assets/css/uindex.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -29,7 +33,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="video.html">YouTube</a></li>
-        <li><a href="#stallions">Stallions</a></li>
+        <li><a href="stallionlisting.html">Stallions</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="nav-toggle">
@@ -64,7 +68,7 @@
   <div class="container reveal">
     <h2>Everything for Horse Enthusiasts</h2>
     <p>
-      Welcome to <strong>PetList Tamil</strong> � connecting horse lovers, breeders, and farms across Tamil Nadu.
+      Welcome to <strong>PetList Tamil</strong> � connecting horse lovers, breeders, and farms across Tamil Nadu.
     </p>
 
     <div class="services-grid">
@@ -98,110 +102,38 @@
 
 
 <!-- ? Top Stallions Section -->
-<section class="top-stallions">
+<section class="top-stallions stallion-section">
   <div class="stallion-container">
     <h2 class="section-title">Top Stallions</h2>
     <p class="section-subtitle">
       Discover our finest Marwari stallions, carefully bred for strength, agility and graceful temperament.
     </p>
 
+    <!-- Slider / Grid -->
     <div class="stallion-slider-wrapper">
-      <div class="stallion-slider">
-        
-        <!-- Stallion Card 1 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="stallion1.jpg" alt="Thunder King">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Thunder King</h3>
-              <p><i class="fa-solid fa-user"></i> Owner: <span>Arjun Rao</span></p>
-              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Sunrise Ranch</span></p>
-              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Trichy, TN</span></p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">Show Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Stallion Card 2 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="stallion2.jpg" alt="Royal Blaze">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Royal Blaze</h3>
-              <p><i class="fa-solid fa-user"></i> Owner: <span>Meera Farms</span></p>
-              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Green Valley</span></p>
-              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Chennai, TN</span></p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">Show Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Stallion Card 3 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="stallion3.jpg" alt="Majestic Star">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Majestic Star</h3>
-              <p><i class="fa-solid fa-user"></i> Owner: <span>Ravi Kumar</span></p>
-              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Blue Sky Ranch</span></p>
-              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Bangalore, KA</span></p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">Show Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Stallion Card 4 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="stallion4.jpg" alt="Silver Arrow">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Silver Arrow</h3>
-              <p><i class="fa-solid fa-user"></i> Owner: <span>Kavya Farms</span></p>
-              <p><i class="fa-solid fa-tractor"></i> Farm: <span>Golden Meadows</span></p>
-              <p><i class="fa-solid fa-map-location-dot"></i> District: <span>Hyderabad, TS</span></p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">Show Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Add more stallion cards as needed -->
+      <div class="stallion-slider top-stallion-slider">
+        <!-- Stallion cards will be injected here by JS based on JSON data -->
       </div>
+    </div>
 
-      <!-- Mobile Slider Navigation -->
-      <!-- Mobile Pagination + Show All -->
-<div class="stallion-nav-wrapper">
-  <div class="stallion-nav">
-
-</div>
-  <a href="stallions.html" class="show-all-btn" aria-label="See all stallions">
-    <i class="fa-solid fa-arrow-right"></i>
-  </a>
-</div>
-
+    <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav">
+        <span class="active">–</span>
+        <span>–</span>
+        <span>–</span>
+      </div>
+      <div class="show-all-wrapper">
+        <a href="stallionlisting.html" class="show-all-btn" aria-label="See all stallions">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-
-
 <!-- ======================== Looking for a New Home Section ======================== -->
-<section class="new-home-horses">
+<section class="new-home-horses stallion-section">
   <div class="stallion-container">
 
     <!-- Section Header -->
@@ -212,280 +144,82 @@
 
     <!-- Slider / Grid -->
     <div class="stallion-slider-wrapper">
-      <div class="stallion-slider">
-
-        <!-- Horse Card 1 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="horse1.jpg" alt="Midnight Star">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Midnight Star</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Meera Farms</p>
-              <p><i class="fa-solid fa-horse"></i> Breed: Marwari</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Trichy, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Horse Card 2 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="horse2.jpg" alt="Golden Blaze">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Golden Blaze</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Arjun Rao</p>
-              <p><i class="fa-solid fa-horse"></i> Breed: Thoroughbred</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Chennai, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Horse Card 3 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="horse3.jpg" alt="Majestic Star">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Majestic Star</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Ravi Kumar</p>
-              <p><i class="fa-solid fa-horse"></i> Breed: Marwari</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Madurai, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Horse Card 4 -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="horse4.jpg" alt="Silver Arrow">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Silver Arrow</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Kavya Farms</p>
-              <p><i class="fa-solid fa-horse"></i> Breed: Thoroughbred</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Coimbatore, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
+      <div class="stallion-slider new-home-slider">
+        <!-- Cards will be injected here by JS -->
       </div>
+    </div>
 
-      <!-- Mobile Pagination + Show All -->
-      <div class="stallion-nav-wrapper">
-        <div class="stallion-nav"></div>
-
-        <a href="sale.html" class="show-all-btn" aria-label="See all sale horses">
-          <i class="fa-solid fa-arrow-right"></i>
+    <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav"></div>
+      <div class="show-all-wrapper">
+        <a href="newhome.html" class="show-all-btn" aria-label="See all horses">
+          <i class="fa-solid fa-arrow-right"></i> Show All
         </a>
       </div>
-
     </div>
-  </div>
-</section>
-<!-- Trending Videos Section -->
-<section class="trending-videos">
-  <div class="container">
-    <h2>Trending Videos</h2>
-<p class="trending-subtext">
-      Watch the latest and most popular clips making waves right now.
-    </p>
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/PAsB2_UNI4M"
-              frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/smnry5NH9gs"
-              frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/n4tK7LYFxI0"
-              frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-<!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div class="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/n4tK7LYFxI0"
-              frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-<!-- Slide 5 -->
-        <div class="swiper-slide">
-          <div class="video-wrapper">
-            <iframe 
-              src="https://www.youtube.com/embed/n4tK7LYFxI0"
-              frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-
-
-      </div>
-
-      <!-- Navigation arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
-    </div>
   </div>
 </section>
 
-
-
-
-<!-- ======================== More Pets Section ======================== -->
-<section class="more-pets">
+<!-- ======================== More Pets Section ========================
+<section class="more-pets stallion-section">
   <div class="stallion-container">
-    <!-- Section Header -->
     <h2 class="section-title">More Pets</h2>
     <p class="section-subtitle">
-      Explore other lovable pets ready for a caring new home.
+      Discover other beloved pets across Tamil Nadu.
+    </p>
+    <div class="stallion-slider-wrapper">
+      <div class="stallion-slider more-pets-slider">
+        Cards injected here by JS
+      </div>
+    </div>
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav"></div>
+      <div class="show-all-wrapper">
+        <a href="sale.html" class="show-all-btn" aria-label="See all sale horses">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+======================== End More Pets Section ======================== -->
+
+
+
+<!-- ======================== Recent Horses Section ======================== -->
+<section class="recent-horses stallion-section">
+  <div class="stallion-container">
+
+    <!-- Section Header -->
+    <h2 class="section-title">Recent Horses</h2>
+    <p class="section-subtitle">
+      Newly added horses to our list
     </p>
 
     <!-- Slider / Grid -->
     <div class="stallion-slider-wrapper">
-      <div class="stallion-slider">
-        <!-- Cat Card -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="cat1.jpg" alt="Whiskers the Cat">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Whiskers</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Priya Meows</p>
-              <p><i class="fa-solid fa-paw"></i> Type: Persian Cat</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Chennai, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Dog Card -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="dog1.jpg" alt="Buddy the Dog">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Buddy</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Happy Paws</p>
-              <p><i class="fa-solid fa-dog"></i> Breed: Labrador</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Coimbatore, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Bird Card -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="bird1.jpg" alt="Sunny the Parrot">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Sunny</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Green Wings</p>
-              <p><i class="fa-solid fa-dove"></i> Type: Parrot</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Madurai, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Goat Card -->
-        <article class="stallion-card">
-          <div class="stallion-image">
-            <img src="goat1.jpg" alt="Snowy the Goat">
-          </div>
-          <div class="stallion-details">
-            <div class="details-content">
-              <h3 class="horse-name">Snowy</h3>
-              <p><i class="fa-solid fa-user"></i> Seller: Ravi Farms</p>
-              <p><i class="fa-solid fa-hippo"></i> Breed: Jamunapari</p>
-              <p><i class="fa-solid fa-map-location-dot"></i> Location: Trichy, TN</p>
-            </div>
-            <div class="details-footer">
-              <a href="#" class="details-btn">View Details</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Mobile Pagination + Show All -->
-      <div class="stallion-nav-wrapper">
-        <div class="stallion-nav"></div>
-        <a href="pets.html" class="show-all-btn" aria-label="See more pets">
-  <i class="fa-solid fa-arrow-right"></i>
-</a>
+      <div class="stallion-slider recent-horse-slider">
+        <!-- Cards injected here by JS -->
       </div>
     </div>
+
+     <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav"></div>
+      <div class="show-all-wrapper">
+        <a href="stallionlisting.html" class="show-all-btn" aria-label="See all Stallions">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
 
-  <!-- Contact Form -->
-  <section class="section section-alt" id="contact">
-    <div class="container reveal">
-      <h2>Contact Us</h2>
-      <div class="contact">
-        <div class="contact-card">
-          <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -514,9 +248,9 @@
     <p class="subfooter">&copy; 2025 PetList Tamil. All Rights Reserved.</p>
   </footer>
 
-  <script src="iscript.js"></script>
-
-<a href="https://wa.me/919655519808" class="whatsapp-float" target="_blank">
+  <script src="assets/js/shared.js"></script>
+  <script src="assets/js/iscript.js"></script>
+  <a href="https://wa.me/919655519808" class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 </body>

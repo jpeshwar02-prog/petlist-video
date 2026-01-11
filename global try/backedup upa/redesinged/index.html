@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetList Tamil - Farm & Stallions</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="cssstyle.css">
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="uindex.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="logo">PetList Tamil</a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="video.html">YouTube</a></li>
+        <li><a href="stallionlisting.html">Stallions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  
+  <div class="hero-content">
+    <h1>Showcase Your Stallion</h1>
+    <p>Reach horse lovers across Tamil Nadu with your stallion listing.</p>
+
+    <div class="hero-cta">
+      <a href="#stallions" class="btn btn-primary">Post Now</a>
+      <a href="#services" class="btn btn-ghost">Learn More</a>
+    </div>
+
+    <ul class="badges">
+      <li><i class="fas fa-check-circle"></i> Trusted Platform</li>
+      <li><i class="fas fa-bullhorn"></i> Promote Your Stallion</li>
+      <li><i class="fas fa-camera"></i> Professional Media</li>
+    </ul>
+  </div>
+
+  </section>
+
+<section class="section section-alt" id="services">
+  <div class="container reveal">
+    <h2>Everything for Horse Enthusiasts</h2>
+    <p>
+      Welcome to <strong>PetList Tamil</strong> � connecting horse lovers, breeders, and farms across Tamil Nadu.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fas fa-camera"></i>
+        <h3>Pet Photography</h3>
+      </div>
+      <div class="service-box">
+        <i class="fab fa-youtube"></i>
+        <h3>YouTube Channel</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-warehouse"></i>
+        <h3>Farm Listing</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-horse"></i>
+        <h3>Stallion Listing</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-shopping-bag"></i>
+        <h3>Pet Product Ads</h3>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Event Updates</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ? Top Stallions Section -->
+<section class="top-stallions stallion-section">
+  <div class="stallion-container">
+    <h2 class="section-title">Top Stallions</h2>
+    <p class="section-subtitle">
+      Discover our finest Marwari stallions, carefully bred for strength, agility and graceful temperament.
+    </p>
+
+    <!-- Slider / Grid -->
+    <div class="stallion-slider-wrapper">
+      <div class="stallion-slider top-stallion-slider">
+        <!-- Stallion cards will be injected here by JS based on JSON data -->
+      </div>
+    </div>
+
+    <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav">
+        <span class="active">–</span>
+        <span>–</span>
+        <span>–</span>
+      </div>
+      <div class="show-all-wrapper">
+        <a href="stallions.html" class="show-all-btn" aria-label="See all stallions">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== Looking for a New Home Section ======================== -->
+<section class="new-home-horses stallion-section">
+  <div class="stallion-container">
+
+    <!-- Section Header -->
+    <h2 class="section-title">Looking for a New Home</h2>
+    <p class="section-subtitle">
+      Meet beautiful horses recently listed by trusted owners and breeders across Tamil Nadu.
+    </p>
+
+    <!-- Slider / Grid -->
+    <div class="stallion-slider-wrapper">
+      <div class="stallion-slider new-home-slider">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </div>
+
+    <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav"></div>
+      <div class="show-all-wrapper">
+        <a href="sale.html" class="show-all-btn" aria-label="See all sale horses">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================== More Pets Section ======================== -->
+<section class="more-pets stallion-section">
+  <div class="stallion-container">
+
+    <!-- Section Header -->
+    <h2 class="section-title">More Pets</h2>
+    <p class="section-subtitle">
+      Discover other beloved pets across Tamil Nadu.
+    </p>
+
+    <!-- Slider / Grid -->
+    <div class="stallion-slider-wrapper">
+      <div class="stallion-slider more-pets-slider">
+        <!-- Cards injected here by JS -->
+      </div>
+    </div>
+
+     <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav"></div>
+      <div class="show-all-wrapper">
+        <a href="sale.html" class="show-all-btn" aria-label="See all sale horses">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
+    </div>
+
+    </div>
+</section>
+
+<!-- ======================== Recent Horses Section ======================== -->
+<section class="recent-horses stallion-section">
+  <div class="stallion-container">
+
+    <!-- Section Header -->
+    <h2 class="section-title">Recent Horses</h2>
+    <p class="section-subtitle">
+      Newly added horses to our list
+    </p>
+
+    <!-- Slider / Grid -->
+    <div class="stallion-slider-wrapper">
+      <div class="stallion-slider recent-horse-slider">
+        <!-- Cards injected here by JS -->
+      </div>
+    </div>
+
+     <!-- Pagination + Show All -->
+    <div class="stallion-nav-wrapper">
+      <div class="stallion-nav"></div>
+      <div class="show-all-wrapper">
+        <a href="sale.html" class="show-all-btn" aria-label="See all sale horses">
+          <i class="fa-solid fa-arrow-right"></i> Show All
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>PetList Tamil</h4>
+        <p>Connecting pet lovers, horse breeders, and farms in Tamil Nadu.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#stallions">Stallions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="subfooter">&copy; 2025 PetList Tamil. All Rights Reserved.</p>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="iscript.js"></script>
+    <script src="rascript.js"></script>
+
+<a href="https://wa.me/919655519808" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+</html>
