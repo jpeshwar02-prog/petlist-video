@@ -1,4 +1,7 @@
-# PetList Tamil 🐎 / The real project name will only be revealed when you take the site live.
+# Pethub-site 🐎
+Next-level idea evolving from the PetList Tamil channel.  
+⚠️ The real project name will only be revealed when the site goes live.
+
 
 **PetList Tamil** is a responsive horse and farm listing platform tailored for Tamil Nadu. It showcases stallions, connects breeders and buyers, and showing services, events, and farm profiles.
 
